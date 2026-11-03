@@ -1,8 +1,8 @@
 # Aprender en tiempos de IA
 
-Estos son los ejercicios de la charla. Son tres:
+Hoy vamos a hacer una serie de ejercicios que nos van a ayudar a aportar ese valor extra que va más allá de solo promptear una IA: entender qué pasa, validarlo y también la parte humana, yendo a conseguir un cliente y manejándolo. Son tres:
 
-1. **Leer más código:** le pedimos una app a la IA, anotamos qué queremos que tenga y qué pensamos que va a hacer, lo buscamos en el código y después lo comparamos con la app funcionando.
+1. **Leer más código:** le pedimos una app muy sencilla a una IA, anotamos qué queremos (y qué no queremos) que tenga, lo buscamos en el código y después lo comparamos con la app funcionando.
 2. **Escribir más código:** rehacemos esa misma app, primero usando completions y después a mano.
 3. **Conseguir un cliente:** buscamos un negocio cerca, le armamos una demo y se la mostramos.
 
@@ -12,9 +12,9 @@ Usá la tecnología que ya conozcas y hacelos a tu ritmo.
 
 ## Ejercicio 1: Leer más código
 
-Cada vez escribimos menos código y leemos más el que escribe la IA. Pero leer código no es mirarlo por arriba y decir «parece que anda». Es poder mirar algo que hace la app y encontrar el código que lo hace.
+Cada vez escribimos menos código y leemos más el que escribe la IA. Pero leer código no es mirarlo por arriba y decir «parece que anda». Es poder mirar algo que hace la app y saber qué código lo hace.
 
-Para practicarlo, vamos a pedirle una app a la IA. Antes de probarla, vamos a anotar qué queremos y qué pensamos que va a pasar, vamos a leer el código y recién después vamos a comparar nuestras notas con la app funcionando.
+Para practicarlo, vamos a pedirle una app muy sencilla a una IA. Antes de probarla, vamos a anotar qué queremos (y qué no queremos) que tenga la app, vamos a leer el código y recién después vamos a comparar nuestras notas con la app funcionando.
 
 1. **Pedile a una IA una app sencilla.** Puede ser una lista de tareas o de supermercado, en v0, Claude, ChatGPT o la que quieras. El prompt no tiene que ser largo: «Hacé una lista de supermercado sencilla y fácil de usar, con todo el código en un solo archivo».
 2. **Mientras la IA trabaja, armá tu lista.** Abrí un bloc de notas y anotá qué cosas pensás que tiene que tener (o no tener) la app para ser sencilla y fácil de usar. Me dirán: «es una lista de supermercado, ¿cuántas cosas puede tener?». Bueno, algunos ejemplos:
