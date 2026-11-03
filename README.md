@@ -1,20 +1,20 @@
 # Aprender en tiempos de IA
 
-Cuatro ejercicios para leer más código, aprender escribiéndolo y encontrar oportunidades con clientes reales. Hacelos con la tecnología que ya estés usando y a tu ritmo.
+Estos son los ejercicios de la charla. Son cuatro: uno para aprender a leer el código que escribe la IA, dos para aprender escribiéndolo y uno para llevarle una solución a un cliente real. Usá la tecnología que ya conozcas y hacelos a tu ritmo.
 
 [Slides de la charla](https://www.figma.com/slides/u9hMhTKBKHKe04UqdW20xq) · [Video con los ejercicios](https://www.youtube.com/watch?v=UoRvcQ9avgw)
 
 ### Ejercicio 1: Versión solo IA
 
-Vamos a usar una app generada por IA para practicar cómo leer código y entender qué hace.
+Vamos a pedirle a una IA que nos haga una app y, antes de probarla, vamos a leer el código para entender qué hace.
 
-1. **Pedile a una IA una app sencilla**, como una lista de tareas o de supermercado. Un pedido breve alcanza: «Hacé una lista de supermercado sencilla y fácil de usar, con la implementación en un solo archivo».
-2. **Sin abrir el navegador ni la vista previa**, y mientras la IA trabaja, escribí tu lista de esperables: las cosas que considerás esenciales para esa app. Por ejemplo, agregar y borrar productos, enviar con Enter, tener el foco en el campo al abrir y rechazar productos vacíos. Elegí lo que te importa a vos.
-3. **Buscá cada esperable en el código.** Anotá si creés que está implementado y qué código lo demuestra. Si no entendés algo, intentá razonarlo primero; después podés pedirle una pista a la IA.
-4. **Ahora sí, probá la app en el navegador.** Compará lo que pasa con lo que habías deducido leyendo. Si no coincide, volvé al código hasta entender por qué.
-5. **Corregí y repetí.** Podés pedirle cambios a la IA, pero volvé a leerlos y probarlos. Sacá lo que consideres innecesario hasta quedarte con una app pequeña y fácil de usar.
+1. **Pedile a una IA una app sencilla.** Puede ser una lista de tareas o de supermercado, en v0, Claude, ChatGPT o la que quieras. El prompt no tiene que ser largo: «Hacé una lista de supermercado sencilla y fácil de usar, con todo el código en un solo archivo».
+2. **Mientras la IA trabaja, armá tu lista.** Abrí un bloc de notas y anotá qué cosas pensás que tiene que tener la app para ser sencilla y fácil de usar. Por ejemplo: ¿puedo agregar y borrar productos? ¿Puedo agregar apretando Enter? Cuando entro, ¿el foco ya está en el campo para escribir? ¿Me deja agregar un producto vacío? Vos decidís qué es importante para tu app. Todavía no abras el navegador ni la vista previa.
+3. **Cuando termine, andá al código, no al navegador.** Buscá cada cosa de tu lista y anotá si está implementada y en qué parte del código. Si algo no lo entendés, primero intentá razonarlo vos. Si no sale, pedile una pista a la IA.
+4. **Ahora sí, abrí la app en el navegador.** Compará lo que pasa con lo que anotaste leyendo el código. Si algo no coincide, volvé al código hasta entender por qué.
+5. **Iterá hasta que quede simple.** Pedile a la IA que saque o cambie lo que sobra o está mal, y cada cambio leelo y probalo de nuevo. La idea es terminar con una app chica y fácil de usar, solo con lo que vos considerás básico.
 
-Por ejemplo, en React este campo recibe foco al montarse:
+Por ejemplo, pensemos en el foco al abrir la app. Seguramente tenga que ver con el input, así que vamos a buscarlo. En React, si el input tiene `autoFocus`, recibe el foco cuando se monta. Check:
 
 ```jsx
 <label>
@@ -23,50 +23,50 @@ Por ejemplo, en React este campo recibe foco al montarse:
 </label>
 ```
 
-Pero eso no demuestra que el foco vuelva al campo después de agregar un producto. Esa es otra conducta que tenés que buscar y probar.
+Ojo, eso no significa que el foco vuelva al campo después de agregar un producto. Eso es otra cosa, y también la tenés que buscar en el código y probar.
 
-**La meta:** poder relacionar lo que hace la app con el código que lo implementa.
+**La meta:** mirar algo que hace la app y poder encontrar el código que lo hace.
 
 ### Ejercicio 2: Completions
 
-Cuando programamos, muchas veces se mezclan dos problemas: decidir qué queremos hacer y descubrir cómo implementarlo. Esa falta de claridad nos hace cambiar de rumbo, confundirnos y frustrarnos.
+Cuando hacemos una app desde cero, en realidad hacemos dos cosas: pensar qué tiene que hacer y descubrir cómo implementarla. Muchas veces creemos que lo tenemos claro, pero cuando empezamos a escribir aparecen dudas y cambios, nos mareamos y nos frustramos.
 
-Ahora ya tenemos una app que funciona y sabemos qué debe hacer. Podemos concentrarnos en implementarla.
+Pero ahora ya tenemos una app que funciona y sabemos lo que tiene que hacer. Nos podemos enfocar solo en implementarla.
 
-1. **Creá un proyecto nuevo** y reconstruí la misma app, con los mismos esperables del ejercicio anterior.
-2. **Escribí usando completions:** las sugerencias de IA que aparecen mientras tipeás en el editor. Podés aceptarlas si entendés qué hacen, pero no copiar y pegar implementaciones ni pedirle a un agente que escriba la app completa.
-3. **Probá con la misma lista de esperables.** Si algo te bloquea mucho, dejalo anotado y seguí con otra parte; volvé después. Si necesitás mirar una implementación anterior, usala como referencia y luego escribila vos.
+1. **Creá un proyecto nuevo, desde cero,** y hacé la misma app otra vez, con la misma lista del ejercicio anterior.
+2. **Escribila con completions,** o sea, las sugerencias que te aparecen en el editor mientras escribís (Copilot, Cursor o el que uses). Podés aceptarlas si entendés lo que hacen, pero no vale copiar y pegar código ni pedirle a un agente que te haga la app.
+3. **Probala con tu lista.** Si te trabás mucho en alguna parte, anotala, seguí con otra cosa y volvé después. Si necesitás mirar cómo estaba hecho en el proyecto anterior, miralo como referencia, pero después escribilo vos.
 
-**La meta:** pasar de reconocer una implementación a poder construirla, con ayuda mientras escribís.
+**La meta:** pasar de entender el código a poder escribirlo, con una ayuda mientras escribís.
 
-### Ejercicio 3: Escribirlo enteramente
+### Ejercicio 3: Escribirlo todo vos
 
-Rehacé la misma app una tercera vez, desde cero. Esta vez, desactivá las completions de IA y escribí vos todo el código de la aplicación. Podés consultar documentación y usar las ayudas habituales de sintaxis del editor.
+Hacé la misma app por tercera vez, en un proyecto nuevo. Ahora apagá las completions y escribí vos el 100% del código. Podés leer documentación y usar las ayudas de sintaxis normales del editor.
 
-A esta altura ya decidiste qué hacer y recorriste su implementación dos veces. El trabajo empieza a ser más mecánico: recordás las partes y podés dedicar tu atención a escribirlas y entender cómo se conectan.
+A esta altura ya sabés qué tiene que hacer la app y ya la implementaste dos veces. Vas a tener casi todo el código en la cabeza, así que va a ser bastante mecánico: te acordás de las partes y te podés enfocar en escribirlas y en entender cómo se conectan.
 
-Mientras escribís, van a aparecer esos momentos de «ah, por esto estaba esta línea» o «pensé que podía sacarlo, pero ahora entiendo para qué servía». Escribir, equivocarte y corregir te ayuda a aprender cosas que podías pasar por alto al leer.
+Mientras la escribís, van a aparecer momentos de «ah, esta línea estaba por esto». O vas a pensar que algo sobra, lo vas a sacar, no va a andar y ahí vas a entender para qué servía. Ese es el momento en el que aprendés algo que te queda, y que posiblemente no hubieras aprendido solo leyendo el código.
 
-Al terminar, probá los mismos esperables y compará las tres versiones. Fijate qué podés explicar ahora que antes no entendías.
+Cuando termines, probala con tu lista y compará las tres versiones. Fijate qué cosas podés explicar ahora que antes no entendías.
 
-**La meta:** escribir código como una forma de aprender y, con esa experiencia, también aprender a leerlo mejor.
+**La meta:** escribir código no para escribirlo, sino para aprender, y así entender mejor el código que leés.
 
-> ¿Querés otra vuelta? Agregá un segundo de espera al cargar, agregar y borrar elementos. Pensá qué debería ver la persona mientras espera y qué pasa si hace otra acción. Después repetí los tres ejercicios con esa pequeña complejidad.
+> ¿Querés otra vuelta? Hacé que cargar, agregar y borrar tarden un segundo. Pensá qué debería ver la persona mientras espera y qué pasa si hace otra cosa mientras tanto. Después hacé los tres ejercicios otra vez con ese cambio.
 
 ### Ejercicio 4: Llevar una solución a un cliente
 
-Buscá una mejora pequeña para un negocio o emprendimiento cercano y prepará algo que puedas mostrarle. En este ejercicio podés usar IA para avanzar rápido con el prototipo.
+Buscá algo chico para mejorar en un negocio o emprendimiento que tengas cerca y armá algo para mostrarle. Acá sí podés usar la IA para hacer el prototipo rápido, porque la meta es otra.
 
-Elegí ideas que sean simples en tres sentidos: **poco código, poco tiempo de desarrollo y poco esfuerzo para que el cliente las empiece a usar**. Una app que tarda dos horas en construirse pero obliga al negocio a cambiar toda su forma de trabajar puede ser una mala primera propuesta.
+Buscá ideas que sean simples en tres sentidos: **poco código, poco tiempo de desarrollo y poco esfuerzo para que el cliente la empiece a usar**. Si la app te lleva dos horas pero el negocio tiene que cambiar toda su forma de trabajar, posiblemente no sea una buena primera propuesta.
 
-1. **Encontrá una oportunidad concreta.** Por ejemplo, una carta accesible por QR, un catálogo para armar pedidos o una agenda pública de actividades. Preguntate también quién actualizaría la información y cuánto trabajo le daría.
-2. **Prepará una demo pequeña.** Resolvé un solo recorrido que puedas mostrar en pocos minutos. Usá datos de ejemplo y evitá sumar funciones antes de saber si interesan.
-3. **Mostrala y escuchá.** Acercate con algo funcionando, explicá qué pensaste y preguntá si le serviría. Si hay interés, acuerden una prueba pequeña: qué incluye, qué necesita aportar el negocio y qué va a costar, aunque esa primera entrega sea gratuita.
+1. **Encontrá algo concreto para resolver.** Por ejemplo, una carta por QR, un catálogo para armar pedidos o una agenda de actividades. Pensá también quién va a actualizar la información y cuánto trabajo le va a dar.
+2. **Armá una demo chica.** Que resuelva una sola cosa y que la puedas mostrar en pocos minutos. Usá datos de ejemplo y no le agregues funcionalidades antes de saber si le interesan.
+3. **Mostrala y escuchá.** Andá con algo que ya funcione, contale qué pensaste y preguntale si le serviría. Si le interesa, acuerden una prueba chica: qué incluye, qué tiene que aportar el negocio y cuánto va a costar, aunque esta primera vez sea gratis.
 
-Podés empezar la conversación así:
+Podés arrancar la conversación así:
 
-> Hola, estoy practicando desarrollo y armé esta demo pensando en tu negocio. Vi que [observación] y se me ocurrió [solución]. ¿Te la puedo mostrar y me contás si te serviría?
+> Hola, estoy practicando desarrollo y armé esta demo pensando en tu negocio. Vi que [observación] y se me ocurrió [solución]. ¿Te la muestro y me decís si te sirve?
 
-Buscá que probarla sea fácil: compartir un enlace o poner un QR suele requerir menos esfuerzo que capacitar a todo el equipo o cargar cientos de productos. Si la propuesta sirve, van a tener oportunidades de ampliarla después.
+Hacé que probarla sea fácil: mandar un link o poner un QR es mucho menos trabajo que capacitar a todo el equipo o cargar cientos de productos. Si funciona, después hay tiempo para hacerla crecer.
 
-**La meta:** resolver algo útil para una persona real y aprender de su devolución. Una demo lista abre la conversación; el cliente aparece cuando alguien acepta trabajar con vos.
+**La meta:** resolverle algo útil a una persona real y aprender de lo que te diga. La demo abre la conversación, pero el cliente aparece cuando alguien acepta trabajar con vos.
